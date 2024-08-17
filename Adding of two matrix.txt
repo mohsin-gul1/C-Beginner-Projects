@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+void input();
+void operation();
+void matrix();
+int a[3][3],b[3][3],c[3][3],i,j;
+int main()
+{
+    input();
+    operation();
+    matrix();
+}
+void input()
+{
+    
+    cout<<"Enter 9 Elements for A:";
+    for(i=0; i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Enter 9 Elements for B:";
+    for(i=0; i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+}
+void operation()
+{
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            c[i][j]=a[i][j]+b[i][j];
+            
+        }
+    }
+}
+void matrix()
+{
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<c[i][j]<<"    ";
+            
+        }
+        cout<<endl;
+    }
+}
